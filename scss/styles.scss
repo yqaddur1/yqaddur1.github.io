@@ -452,12 +452,13 @@ footer {
     background-color:black;
 
     h2 {
-        color: $heading;
+        color: rgb(255, 255, 255);
     }
 
     p {
-        color: $text;
+        color: rgb(254, 254, 254);
         margin: 0;
+        font-size: large;
     }
 }
 
