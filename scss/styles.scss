@@ -265,6 +265,11 @@ footer {
         border-radius: 50%;
         border: 3px solid lighten($text, 25%);
         text-align:center;
+        @include transition();
+        
+        &:hover{
+            border: 3px solid lighten($base-color, 25%);
+        }
     }
 
     i {
@@ -290,9 +295,10 @@ footer {
         display: block;
         color: $text;
         padding: 10px;
+        @include transition();
 
         &:hover {
-            color: $base-color;
+            color: lighten($base-color, 25%);
         }
     }
 }
@@ -313,11 +319,11 @@ footer {
 }
 
 .shadow {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
 }
 
 .shadow-large {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.08), 0 3px 6px rgba(255, 255, 255, 0.15);
 }
 
 .bold {
@@ -345,7 +351,7 @@ footer {
 }
 
 .background-alt {
-    background: $background-alt;
+    background: #000000;
 }
 
 .background {
@@ -397,6 +403,10 @@ footer {
         font-size: 2.25em;
         margin-bottom: 15px;
     }
+
+    a {
+        margin-bottom: 0px;
+    }
 }
 
 #lead-overlay {
@@ -439,6 +449,40 @@ footer {
     }
 }
 
+$icon-size: 5.5rem;
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+.lead-icons {
+    a {
+    display: inline-block;
+    height: $icon-size;
+    width: $icon-size;
+    //background-color: #495057;
+    color: #fff;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: $icon-size/2;
+    line-height: $icon-size/1.1;
+    @include transition();
+    margin: 0 5px;
+    margin-bottom: 0;
+
+    &:hover {
+        color: #492054;
+        background: #ffffff;
+        border: 2px solid #512661;
+    }
+
+  }
+}
+
 @keyframes pulsate {
     0% {
         transform: scale(1, 1);
@@ -461,7 +505,7 @@ footer {
 
 #about {
     padding: 65px 15px;
-    // border-bottom: 1px solid $border;
+    border-bottom: $border-pixels solid $border;
     background-color:black;
 
     h2 {
@@ -599,7 +643,7 @@ footer {
 */
 
 #education {
-    padding: 50px 15px 20px 15px;
+    padding: 30px 15px 20px 15px;
     text-align: center;
     background-color: #471559;
     border-bottom: $border-pixels solid $border;
@@ -607,7 +651,7 @@ footer {
 
     h2 {
         color: $heading;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 }
 
@@ -634,13 +678,13 @@ footer {
         color: $text;
         clear: both;
         font-weight: 500;
-        margin: 0 0 15px 0;
+        margin: 0 0 5px 0;
     }
 
     p, ul {
         margin: 0;
         color: $text;
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
 
     ul {
@@ -655,29 +699,34 @@ footer {
 */
 
 #projects {
-    padding: 40px 15px;
+    padding: 30px 15px;
     border-bottom: $border-pixels solid $border;
     text-align: center;
-    background: #210023;
+    background: #050005;
 
     h2 {
         color: $section_heading;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 }
 
 $max-width: 1000px;
+$width: 200px;
+$project-heading: #250931;
+$project-sub: $background;
+$project-info:#000000;
+$project-image: #d1d1d1;
+$project-bg:#d2d2d2;
 
 .project {
     position: relative;
     max-width: $max-width;
     margin: 0 auto 30px auto;
     overflow: hidden;
-    background: #b29eb6;
+    background: $project-bg;
     border-radius: 4px;
 }
 
-$width: 200px;
 
 .project-image {
     float: left;
@@ -685,7 +734,8 @@ $width: 200px;
     img {
         width: $width;
         height:$width;
-        background-color: #fbfbfb; 
+        background-color: $project-image;
+        //border-right: 3px solid #000000;
     }
 }
 
@@ -701,14 +751,14 @@ $width: 200px;
         font-size: 1.25em;
         font-weight: 400;
         text-align: center;
-        color: #250931;
+        color: $project-heading;
         margin: 0 0 -3px 0;
     }
     
     h6 {
         font-size: 1.00em;
         font-weight: 450;
-        color: $background;
+        color: $project-sub;
         margin: -4px 0 2px 0;
     }
 
@@ -716,7 +766,7 @@ $width: 200px;
         margin:0 0 0 15px;
         padding:0;
         text-align: left;
-        color: #000000;
+        color: $project-info;
     }
 
     li {
@@ -856,6 +906,8 @@ $width: 200px;
     padding: 30px 15px;
     text-align: center;
     background-color: $background;
+    border-bottom: $border-pixels solid $border;
+
     h2 {
         color: $heading;
         margin-bottom: 20px;
