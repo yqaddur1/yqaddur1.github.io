@@ -35,19 +35,23 @@
 
 // Define base and accent colors
 //$base-color: #3498db;
-$base-color: #136f4a;
+$base-color: #471559;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+$background: darken($base-color, 0%);
+$background-alt: #6b436f;
+$custom_bg: #9b61b0;
+$after-color: rgb(105, 65, 129);
 
 // Define border colors
 $border: #dcd9d9;
+$border-pixels: 3px;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #ffffff;
+$section_heading: #ffffff;
+$text: #f0f0f0;
 
 /*
     ---------------------
@@ -155,7 +159,7 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
+        background: #dad6da;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -316,11 +320,15 @@ footer {
     box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .heading {
     position: relative;
     display: inline-block;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 375;
     margin: 0 0 30px 0;
 
     &:after {
@@ -332,13 +340,18 @@ footer {
         left: 0;
         right: 0;
         margin: 0 auto;
-        background: $base-color;
+        background: $after-color;
     }
 }
 
 .background-alt {
     background: $background-alt;
 }
+
+.background {
+    background: $background;
+}
+
 
 /*
     --------------------------
@@ -447,7 +460,7 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
+    padding: 65px 15px;
     // border-bottom: 1px solid $border;
     background-color:black;
 
@@ -587,8 +600,10 @@ footer {
 
 #education {
     padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid $border;
     text-align: center;
+    background-color: #471559;
+    border-bottom: $border-pixels solid $border;
+
 
     h2 {
         color: $heading;
@@ -640,32 +655,37 @@ footer {
 */
 
 #projects {
-    padding: 50px 15px;
-    border-bottom: 1px solid $border;
+    padding: 40px 15px;
+    border-bottom: $border-pixels solid $border;
     text-align: center;
+    background: #210023;
 
     h2 {
-        color: $heading;
+        color: $section_heading;
         margin-bottom: 50px;
     }
 }
 
+$max-width: 1000px;
+
 .project {
     position: relative;
-    max-width: 900px;
+    max-width: $max-width;
     margin: 0 auto 30px auto;
     overflow: hidden;
-    background: #fff;
+    background: #b29eb6;
     border-radius: 4px;
 }
+
+$width: 200px;
 
 .project-image {
     float: left;
     
     img {
-        width:300px;
-        height:300px;
-        background-color: black; 
+        width: $width;
+        height:$width;
+        background-color: #fbfbfb; 
     }
 }
 
@@ -673,24 +693,69 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 300px;
+    margin-left: $width;
     padding: 15px;
+    width: $max-width - $width;
 
     h3 {
-        font-size: 1.5em;
-        font-weight: 300;
-        color: $heading;
-        margin: 0 0 15px 0;
+        font-size: 1.25em;
+        font-weight: 400;
+        text-align: center;
+        color: #250931;
+        margin: 0 0 -3px 0;
+    }
+    
+    h6 {
+        font-size: 1.00em;
+        font-weight: 450;
+        color: $background;
+        margin: -4px 0 2px 0;
+    }
+
+    ul {
+        margin:0 0 0 15px;
+        padding:0;
+        text-align: left;
+        color: #000000;
+    }
+
+    li {
+        font-weight: 500;
     }
 
     p {
         color: $text;
-        margin: 0 0 15px 0;
+        margin: 0 0 0px 0;
         font-size: 0.9em;
+        text-align: right;
+    }
+    
+    a {
+        //display: block;
+        color: #000000;
+        width: fit-content;
+        text-align: right;
+        margin: auto;
+        float:right;
+        &:hover{
+            color: $base-color
+        }
+    
     }
 
+}
+
+.test {
     a {
-        padding:0 10px;
+        display: block;
+        color: $text;
+        width: fit-content;
+        text-align: center;
+        margin: auto;
+
+        &:hover {
+            color: $base-color;
+        }
     }
 }
 
@@ -788,12 +853,12 @@ footer {
 */
 
 #skills {
-    padding: 50px 15px;
+    padding: 30px 15px;
     text-align: center;
-
+    background-color: $background;
     h2 {
         color: $heading;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 
     ul {
