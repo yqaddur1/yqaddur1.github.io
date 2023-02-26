@@ -711,6 +711,19 @@ $icon-size: 5.5rem;
     }
 }
 
+#research {
+    padding: 30px 15px;
+    border-bottom: $border-pixels solid $border;
+    text-align: center;
+    background: #050005;
+
+    h2 {
+        color: $section_heading;
+        margin-bottom: 30px;
+    }
+}
+
+
 $max-width: 1000px;
 $width: 200px;
 $project-heading: #250931;
