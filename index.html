@@ -30,11 +30,14 @@
     <!-- End #mobile-menu-toggle -->
     <header>
         <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+            <i class="fa fa-arrow-left"></i>
         </div>
         <ul id="menu" class="shadow">
             <li>
                 <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#workexp">Work</a>
             </li>
             <li>
                 <a href="#skills">Skills</a>
@@ -87,10 +90,14 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4",  style="text-align: center;">
                     <h2 class="heading">Statement</h2>
                 </div>
                 <div class="col-md-8">
+                    <!--<div style="text-align: center;">
+                    <h2 class="heading">Statement</h2>
+                    </div>-->
+                    <div class="education-block", style="margin-bottom: 0px;">
                     <p>
                         A highly motivated applied <b>mathematician</b> extensively trained in <b>statistics</b> and <b>data science</b>. Seeking opportunity for growth and development.
                         In my research, I use <b>representation theory</b> to develop, analyze and implement <b>symmetry-aware machine learning models</b>.
@@ -100,11 +107,36 @@
                         <br>With a proven track record of analyzing complex data sets and solving intricate problems,
                         I am committed to help companies advance by aiding them in developing strategic plans based on <b>data-driven predictive modeling and findings</b>.
                     </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End #about -->
+
+    <div id="workexp">
+        <h2 class="heading">Work Experience</h2>
+        <div class="container">
+            <div class="row">
+    
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/wells.png", style="padding: 30px;"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3><b>Summer 2024 Wells Fargo Quantitative Analytics Internship</b></h3>
+                        <h6></h6>
+                        <ul>
+                        </ul>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #research -->
 
 
     <div id="skills">
@@ -112,6 +144,8 @@
         <ul>
             <li class="language">Pytorch</li>
             <li class="language">TensorFlow</li>
+            <li class="language">Matplotlib</li>
+            <li class="language">Seaborn</li>
             <li class="language">Python</li>
             <li class="language">SQL</li>
             <li class="language">Jupyter</li>
@@ -128,10 +162,42 @@
     </div>
     <!-- End #skills -->
 
+
+
     <div id="projects">
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/fork.png", style="padding: 25px;"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3><b>Food Recommendation System</b></h3>
+                        
+
+                        <!--  with Hana Ghazi and Denial Tan as part of CSE5241
+                        at The Ohio State University SU'21-->
+                        <h6>Python, pandas, Latent Factor Model, Collaborative Team-work</h6>
+                        <ul>
+                            <li>
+                                Completed as part of the <b>Fall 2023 Erdos Institue Data Science Bootcamp</b>.
+                            </li>
+                            <li>
+                                Implemented a <b>recommender system</b> that uses the Yelp Dataset to suggest new restaurants to the user by using only their numerical ratings of restaurants.
+                            </li>
+                            <li>
+                                Tuned for an optimal mixing <b>hyperparameter</b> in a mixture model of a Latent Factorization Recommender System and a robust averaging baseline model. 
+                            </li>
+                        </ul>
+                        <a href="https://github.com/yqaddur1/Food-Rec-Erdos23" target="_blank"><i class="fa fa-github"
+                            aria-hidden="true"></i> View in Github</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
 
 
                 <div class="project shadow-large">
@@ -246,7 +312,7 @@
             <h4>
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                 PhD in Mathematics (Current)
-                <span style="float:right;">GPA: 3.97</span>
+                <span style="float:right;">Summa Cum Laude</span>
             </h4>
             <ul>
                 <li>
@@ -262,7 +328,7 @@
             <h4 style="margin-top:4px;">
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                 MSc in Applied Statistics (Dual Degree, Graduated 2023)
-                <span style="float:right;">GPA: 4.0</span>
+                <span style="float:right;">Summa Cum Laude</span>
             </h4>
             <ul>
                 <li>
@@ -285,7 +351,7 @@
             <h4>
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                 BA in Mathematics and Computer Science
-                <span style="float:right;">GPA: 3.95</span>
+                <span style="float:right;">Summa Cum Laude</span>
             </h4>
             <ul>
                 <li>

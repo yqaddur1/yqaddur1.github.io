@@ -211,7 +211,7 @@ header {
     position: fixed;
     right: 15px;
     top: 10px;
-    color: $base-color;
+    color: #eee;
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
@@ -221,20 +221,26 @@ header {
 
 #mobile-menu-close {
     display: none;
+    ///display : inline-block;
     text-align: right;
-    width: 100%;
+    ///width: 100%;
     background: $background;
-    font-size: 1.5em;
-    padding-right: 15px;
-    padding-top: 10px;
+    font-size: 1.6em;
+    padding-right: 10px;
+    ///margin-bottom: 10px;
+    ///padding-top: 2px;
+    padding-bottom: 10px;
+    ///padding-top: -6px;
     cursor: pointer;
-    color: $base-color;
+    color:#eee;
 
     span {
-        font-size: 0.5em;
+        position: relative;
+        font-size: 0.55em;
+        transform: translateY(25%) translateX(-110%);
         text-transform: uppercase;
+        ///margin-bottom: 20px;
     }
-
     i {
         vertical-align: middle;
     }
@@ -504,12 +510,16 @@ $icon-size: 5.5rem;
 */
 
 #about {
-    padding: 65px 15px;
+    padding: 50px 15px;
     border-bottom: $border-pixels solid $border;
-    background-color:black;
+    border-top: $border-pixels solid $border;
+    //background-color:black;
+    background-color: $background;
+    
 
     h2 {
         color: rgb(255, 255, 255);
+        text-align: center;
     }
 
     p {
@@ -723,6 +733,20 @@ $icon-size: 5.5rem;
     }
 }
 
+#workexp {
+    padding: 30px 15px;
+    border-bottom: $border-pixels solid $border;
+    background: #050005;
+
+    h2 {
+        ///text-align: left;
+        color: $section_heading;
+        margin-bottom: 30px;
+        ///margin-left: 30px;
+    }
+    text-align: center;
+
+}
 
 $max-width: 1000px;
 $width: 200px;
@@ -747,7 +771,7 @@ $project-bg:#d2d2d2;
     
     img {
         width: $width;
-        height:$width;
+        height: $width;
         background-color: $project-image;
         border-right: 2px solid darken($project-bg, 5%);
     }
@@ -759,7 +783,8 @@ $project-bg:#d2d2d2;
     transform: translateY(-50%);
     margin-left: $width;
     padding: 15px;
-    width: $max-width - $width;
+    ///max-width: $max-width;
+    width: 80%;
 
     h3 {
         font-size: 1.25em;
@@ -1126,6 +1151,19 @@ $project-bg:#d2d2d2;
             text-align: left;
         }
     }
+    
+    .project-image, .award-image {
+        display: none;
+    }
+    
+    .project-info, .award-info {
+        position: relative;
+        margin: 0;
+        padding: 30px 15px;
+        top: auto;
+        transform: none;
+        width: 100%;
+    }
 
 }
 
@@ -1167,14 +1205,41 @@ $project-bg:#d2d2d2;
             font-size: 1.3em;
         }
 
-        a {
-            padding: 10px 20px;
-        }
+        /// a {
+            ///padding: 10px 20px;
+        /// }
     }
 
     #lead-down {
         display: none;
     }
+    $icon-size2: 4rem;
+
+    .lead-icons {
+        a {
+        display: inline-block;
+        height: $icon-size2;
+        width: $icon-size2;
+        //background-color: #495057;
+        color: #fff;
+        border-radius: 100%;
+        border: 2px solid #fff;
+        text-align: center;
+        font-size: $icon-size2/2;
+        line-height: $icon-size2/1.1;
+        @include transition();
+        margin: 0 5px;
+        margin-bottom: 0;
+    
+        &:hover {
+            color: #492054;
+            background: #ffffff;
+            border: 2px solid #512661;
+        }
+    
+      }
+    }
+    
 
     .education-block {
         h3, span {
@@ -1218,7 +1283,7 @@ $project-bg:#d2d2d2;
 
         a {
             font-size: 0.9em;
-            padding: 5px 10px;
+            ///padding: 5px 10px;
         }
     }
 
