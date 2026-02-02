@@ -74,7 +74,8 @@ body.active {
   font-size: 0.9em;
   margin: 0;
 }
-.no-js #experience-timeline:before, .no-js #experience-timeline:after {
+.no-js #experience-timeline:before,
+.no-js #experience-timeline:after {
   content: none;
 }
 
@@ -241,11 +242,15 @@ footer {
 }
 
 .shadow {
-  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 1px 3px rgba(255, 255, 255, 0.12),
+    0 1px 2px rgba(255, 255, 255, 0.24);
 }
 
 .shadow-large {
-  box-shadow: 0 3px 6px rgba(255, 255, 255, 0.08), 0 3px 6px rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 3px 6px rgba(255, 255, 255, 0.08),
+    0 3px 6px rgba(255, 255, 255, 0.15);
 }
 
 .bold {
@@ -874,11 +879,15 @@ footer {
   border: none;
   color: #471559;
   font-weight: 700;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.5s ease all;
 }
 #contact-form button:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /*
@@ -930,7 +939,8 @@ footer {
     -----------------------------
 */
 @media only screen and (max-width: 750px) {
-  #experience-timeline:before, #experience-timeline:after {
+  #experience-timeline:before,
+  #experience-timeline:after {
     left: 23px;
   }
   .vtimeline-date {
@@ -1073,3 +1083,4 @@ footer {
     font-size: 0.9em;
   }
 }
+
